@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Backend</title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <ul>
+        <% for (let user of users) { %>
+        <li><%= user.nama %> - <%= user.kelas %></li>
+        <% } %>
+    </ul>
+    <form action="/tambah" method="post">
+        <h2>Masukan Data</h2>
+        <div>
+            <label for="nama">Nama</label>
+            <input type="text" name="nama">
+        </div>
+        <div>
+            <label for="kelas">Kelas</label>
+            <input type="text" name="kelas">
+        </div>
+        <input type="submit" value="Tambahkan">
+    </form>
+</html>
